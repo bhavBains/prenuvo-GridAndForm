@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.text-center {
+  font-variant-caps: small-caps;
+}
+
 .main-grid {
   display: -ms-flexbox; /* IE10 */
   display: flex;
