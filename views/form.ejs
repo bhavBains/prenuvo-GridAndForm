@@ -1,4 +1,4 @@
-<<html lang="en">
+<html lang="en">
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,12 @@
       <link rel="stylesheet" href="./stylesheets/normalize.css">
       <link rel="stylesheet" href="./stylesheets/form.css">
     </head>
-    <body>
+    <body onload="recoverInputs(document.forms.prenuvo-form,retrieveCookie('inpVal'),true);">
       <div class="container" >
         <div class="jumbotron"><h2 class="text-center">Form Challenge</h2></div>
         <div class="clearfix"></div>
         <div class="border">
-          <form action="/form" method="POST">
+          <form action="/form" method="POST" name="penuvo-form" id="prenuvo-form">
             <p id="top-heading"><strong>This section asks about any symptoms you have been experiencing lately</strong></p>
             <hr>
             <div class="container">
@@ -40,14 +40,14 @@
               <div class="form-group below-heading">
                 <label for="general-symptoms"><small><strong>Check any of the following symptoms that you are or have recently experienced</strong></small></label><br>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="weight-gain" id="weight-gain">
+                  <label class="form-check-label" for="weight-gain">
                     Recent weight gain
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="weight-loss" id="weight-loss">
+                  <label class="form-check-label" for="weight-loss">
                     Recent weight loss
                   </label>
                 </div>
@@ -65,15 +65,15 @@
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
-                    Frequent migranes
+                  <input class="form-check-input" type="checkbox" value="migrain" id="migrain">
+                  <label class="form-check-label" for="migrain">
+                    Frequent migrain
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
-                    Head inuries or concussion
+                  <input class="form-check-input" type="checkbox" value="head-injuries" id="head-injuries">
+                  <label class="form-check-label" for="head-injuries">
+                    Head injuries or concussion
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
@@ -83,146 +83,146 @@
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="earache" name="earache" >
+                  <label class="form-check-label" for="earache">
                     Earache or ear damage
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="ringing-ears" name="ringing-ears">
+                  <label class="form-check-label" for="ringing-ears">
                     Ringing in the ears
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="hearing-loss" name="hearing-loss">
+                  <label class="form-check-label" for="hearing-loss">
                     Hearing loss
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="cold" name="cold">
+                  <label class="form-check-label" for="cold">
                     Frequent colds
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="hayfever" name="hayfever">
+                  <label class="form-check-label" for="hayfever">
                     Frequent hayfever
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="sinus-pain" name="sinus-pain">
+                  <label class="form-check-label" for="sinus-pain">
                     Sinus pain
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="blurred-vision" name="blurred-vision">
+                  <label class="form-check-label" for="blurred-vision">
                     Blurred vision
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Double vision
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     See halos around eyes
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Loss of sense of smell
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Sores in mouth
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Painful or bleeding gums
                     </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Speech difficulties
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Frequent nosebleeds
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Numbness on one side of the face
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Pain in the jaw
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Trouble with balance
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Seizures
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Personality change
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Memory change
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Memory loss
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Problem sleeping
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Changes in ability to walk or perform activities
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="migranes" id="migranes">
-                  <label class="form-check-label" for="migranes">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Pressure in the head
                   </label>
                 </div>
@@ -233,26 +233,26 @@
                   <div class="form-group below-heading col">
                     <label for="general-symptoms"><small><strong>What are the most frequent location(s) of your headaches?*</strong></small></label><br>
                     <div class="form-check form-check-inline border rounded checkboxes-padding">
-                      <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain" checked>
-                      <label class="form-check-label" for="weightGain">
+                      <input class="form-check-input" type="checkbox" name="require-one" value="" id="" checked>
+                      <label class="form-check-label" for="">
                         Front
                       </label>
                     </div>
                     <div class="form-check form-check-inline border rounded checkboxes-padding">
-                      <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                      <label class="form-check-label" for="weightLoss">
+                      <input class="form-check-input" type="checkbox" name="require-one" value="" id="">
+                      <label class="form-check-label" for="">
                         Back
                       </label>
                     </div>
                     <div class="form-check form-check-inline border rounded checkboxes-padding">
-                      <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                      <label class="form-check-label" for="weightLoss">
+                      <input class="form-check-input" type="checkbox" name="require-one" value="" id="">
+                      <label class="form-check-label" for="">
                         Left side
                       </label>
                     </div>
                     <div class="form-check form-check-inline border rounded checkboxes-padding">
-                      <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                      <label class="form-check-label" for="weightLoss">
+                      <input class="form-check-input" type="checkbox" name="require-one" value="" id="">
+                      <label class="form-check-label" for="">
                         Right side
                       </label>
                     </div>
@@ -260,26 +260,26 @@
                   <div class="form-froup below-heading col">
                     <label for="general-symptoms"><small><strong>What is the frequency of your headaches?*</strong></small></label><br>
                     <div class="form-check form-check-inline border rounded checkboxes-padding">
-                      <input class="form-check-input" type="radio" value="weightGain" id="weightGain" >
-                      <label class="form-check-label" for="weightGain">
+                      <input class="form-check-input" type="radio" value="" id="" name="require-one-radio">
+                      <label class="form-check-label" for="">
                         Daily
                       </label>
                     </div>
                     <div class="form-check form-check-inline border rounded checkboxes-padding">
-                      <input class="form-check-input" type="radio" value="weightLoss" id="weightLoss" checked>
-                      <label class="form-check-label" for="weightLoss">
+                      <input class="form-check-input" type="radio" value="" id="" name="require-one-radio" >
+                      <label class="form-check-label" for="">
                         2-3 times/week
                       </label>
                     </div>
                     <div class="form-check form-check-inline border rounded checkboxes-padding">
-                      <input class="form-check-input" type="radio" value="weightLoss" id="weightLoss">
-                      <label class="form-check-label" for="weightLoss">
+                      <input class="form-check-input" type="radio" value="" id="" name="require-one-radio">
+                      <label class="form-check-label" for="">
                         Weekly
                       </label>
                     </div>
                     <div class="form-check form-check-inline border rounded checkboxes-padding">
-                      <input class="form-check-input" type="radio" value="weightLoss" id="weightLoss">
-                      <label class="form-check-label" for="weightLoss">
+                      <input class="form-check-input" type="radio" value="" id="" name="require-one-radio">
+                      <label class="form-check-label" for="">
                         Less frequent
                       </label>
                     </div>
@@ -295,62 +295,62 @@
               <div class="form-group below-heading">
                 <label for="general-symptoms"><small><strong>Check any of the following symptoms that you are or have recently experienced</strong></small></label><br>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Frequent heartburn or acid reflux
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Chest pain that is worse with eating
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Nausea
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Frequent vomiting
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Frequent choking on food
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Lumps or Swelling in Neck
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Lumps or Swelling under the Jaw (Glands)
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Stiff, Painful Neck
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Frequent Sore Throats
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Difficulty in Swallowing
                   </label>
                 </div>
@@ -363,32 +363,32 @@
               <div class="form-group below-heading">
                 <label for="general-symptoms"><small><strong>Check any of the following symptoms that you are or have recently experienced</strong></small></label><br>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Coughing up Sputum
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Wheezing or Asthma
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Feeling of breathlessness
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Chest pain when coughing
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Chest pain when breathing
                   </label>
                 </div>
@@ -407,67 +407,67 @@
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
                   <label class="form-check-label" >
                     Irregular heartbeat (palpitations)
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss" checked>
+                  <input class="form-check-input" type="checkbox" value="" id="" checked>
                   <label class="form-check-label" >
                     Shortness of breath without exercise
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
                   <label class="form-check-label" >
                     Shortness of breath with exercise
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
                   <label class="form-check-label" >
                     Shortness of breath on lying flat in bed
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
                   <label class="form-check-label" >
                     Pale skin
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
                   <label class="form-check-label" >
                     High blood pressure
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
                   <label class="form-check-label" >
                     Chest discomfort
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
                   <label class="form-check-label" >
                     Heart murmur
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss" checked>
+                  <input class="form-check-input" type="checkbox" value="" id="" checked>
                   <label class="form-check-label" >
                     High cholesterol
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
                   <label class="form-check-label" >
                     Frequent fainting or blackouts
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
                   <label class="form-check-label" >
                     Unexplained weakness
                   </label>
@@ -481,140 +481,140 @@
               <div class="form-group below-heading">
                 <label for="general-symptoms"><small><strong>Check any of the following symptoms that you are or have recently experienced</strong></small></label><br>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Belching
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss" checked>
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="" checked>
+                  <label class="form-check-label" for="">
                     Nausea or vomiting
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Vomiting blood
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Frequent Diarrhea
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Painful bowel movements
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Black bowel movements
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Abdominal pain after eating
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Abdominal pain unrelated to eating
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Elevated blood sugar
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Jaundice (yellow skin)
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Unusual thirst
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Passing blood rectally
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Feeling of breathlessness
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                       Constipation
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Blood in urine
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Difficulty starting and maintaining a steady stream of urine
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Excessive urination during night
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Excessive urination during day
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Loss of bladder control
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Cloudy urine
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Passing stones in urine
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Repeated urinary tract infections
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Flank pain (pain that runs from ribs to hips on one side)
                   </label>
                 </div>                
@@ -627,62 +627,62 @@
               <div class="form-group below-heading">
                 <label for="general-symptoms"><small><strong>For women only, check any of the following symptoms that you are or have recently experienced</strong></small></label><br>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Bleeding between periods
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Vaginal bleeding since menopause
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Lumps in breast
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Bloated or irritable before periods
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Vaginal discharge
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Vaginal itching
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Painful periods
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Pain with intercourse
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Scant periods
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Lactation unrelated to pregnancy
                   </label>
                 </div>
@@ -690,32 +690,32 @@
               <div class="form-group below-heading">
                 <label for="general-symptoms"><small><strong>For men only, check any of the following symptoms that you are or have recently experienced</strong></small></label><br>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     High prostate PSA
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Discharge from penis
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Any swelling or bumps in testicles
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Pain in testicles
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Breast growth
                   </label>
                 </div>
@@ -728,26 +728,26 @@
               <div class="form-group below-heading">
                 <label for="general-symptoms"><small><strong>Check any of the following symptoms that you are or have recently experienced</strong></small></label><br>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Back pain/ache
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Joint pain
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Joint swelling
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Numbness
                   </label>
                 </div>                
@@ -760,8 +760,8 @@
               <div class="form-group below-heading">
                 <label for="general-symptoms"><small><strong>Check any of the following symptoms that you are or have recently experienced</strong></small></label><br>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                  <label class="form-check-label" for="weightGain">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Tingling in hands or feet
                   </label>
                 </div>
@@ -772,20 +772,20 @@
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Pain in calves or thighs when walking
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Swelling in hands or feet
                   </label>
                 </div>
                 <div class="form-check form-check-inline border rounded checkboxes-padding">
-                  <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                  <label class="form-check-label" for="weightLoss">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for="">
                     Skin turning blue in fingers or toes
                   </label>
                 </div>
@@ -796,26 +796,26 @@
                     <div class="form-group below-heading col-6">
                       <label for="general-symptoms"><small><strong>Where have you been experiencing the shaking(tick one or all that apply)?*</strong></small></label><br>
                       <div class="form-check form-check-inline border rounded checkboxes-padding">
-                        <input class="form-check-input" type="checkbox" value="weightGain" id="weightGain">
-                        <label class="form-check-label" for="weightGain">
+                        <input class="form-check-input" type="checkbox" value="" id="">
+                        <label class="form-check-label" for="">
                           Left hand
                         </label>
                       </div>
                       <div class="form-check form-check-inline border rounded checkboxes-padding">
-                        <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                        <label class="form-check-label" for="weightLoss">
+                        <input class="form-check-input" type="checkbox" value="" id="">
+                        <label class="form-check-label" for="">
                           Right hand
                         </label>
                       </div>
                       <div class="form-check form-check-inline border rounded checkboxes-padding">
-                        <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                        <label class="form-check-label" for="weightLoss">
+                        <input class="form-check-input" type="checkbox" value="" id="">
+                        <label class="form-check-label" for="">
                           Left foot
                         </label>
                       </div>
                       <div class="form-check form-check-inline border rounded checkboxes-padding">
-                        <input class="form-check-input" type="checkbox" value="weightLoss" id="weightLoss">
-                        <label class="form-check-label" for="weightLoss">
+                        <input class="form-check-input" type="checkbox" value="" id="">
+                        <label class="form-check-label" for="">
                           Right foot
                         </label>
                       </div>
@@ -827,7 +827,7 @@
 
             <div class="d-flex flex-row-reverse">
               <button type="submit" class="btn btn-light btn-lg finish-button" name="finish" value="finish">Finish</button>
-              <input type="button" class="btn btn-light btn-lg save-button" value="Save"></input>    
+              <input type="button" class="btn btn-light btn-lg save-button" value="Save" onclick="setCookie('inpVal',getFormString(this.form,true));"></input>    
             </div>
             
           </form>

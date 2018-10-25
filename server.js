@@ -1,8 +1,15 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+
+// configure the app to use bodyParser()
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json()); // Create application/json parser
 
 app.listen(8080, () => {
   console.log("Your app is running at PORT 8080");
