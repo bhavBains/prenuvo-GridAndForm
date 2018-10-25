@@ -19,3 +19,8 @@ app.get('/grid', (req,res) => {
 app.get('/form', (req,res) => {
   res.render('form');
 });
+
+app.post('/form', (req,res) => {
+  // Perform the logic here for form data to submit
+  res.status(200).redirect('/form');
+});
